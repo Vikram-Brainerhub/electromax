@@ -1,0 +1,48 @@
+{
+  "name": "electromax",
+  "version": "1.0.0",
+  "main": "main.js",
+  "build": {
+  "appId": "com.example.electromax",
+  "productName": "electromax",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "**/*",
+    "!dist/**/*",
+    "!node_modules/**/*"
+  ],
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
+},
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . electromax --platform=win32 --arch=x64 --out=dist --overwrite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vikram-Brainerhub/electromax.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vikram-Brainerhub/electromax/issues"
+  },
+  "homepage": "https://github.com/Vikram-Brainerhub/electromax#readme",
+  "description": "",
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  }
+}
